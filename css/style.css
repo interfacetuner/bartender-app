@@ -6,7 +6,7 @@
   background-color: darkgray;
 }
 
-.imgDisplay {
-  max-width: 100vh;
+p {
+  margin: auto;
   padding: 2em;
 }

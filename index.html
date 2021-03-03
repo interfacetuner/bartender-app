@@ -5,9 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css"> 
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+  <!-- jQuery CDN -->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <!-- local js file -->
   <script defer src="./js/script.js"></script>
 
     
@@ -19,19 +22,20 @@
 <body> 
 	<div class="container"> 
 
-  <Form>
+  <Form class="search">
     <input type="text" placeholder="e.g.Vodka">
   <button type="submit" id="subBtn" class="button">Search</button> 
 </Form>
-<div class="cocktail">
-  
-
+<div class="row">
+  <p id="cocktail">cocktail</p>
 
 </div>
-<div class="thumbnail">
+<div class="row">
+  <p id="thumbnail">Pic</p>
 
   </div>
-  <div class="instructions">
+  <div class="row">
+  <p id="instructions">instructions</p>
 
   </div>
 </div>

@@ -1,11 +1,16 @@
-const $strDrink = $(`.cocktail`);
-const $strDrinkThumb = $(`.thumbnail`);
-const $strInstructions = $(`.instructions`);
+let cocktailData;
+//----constants----
+//const Base_URL='https://www.thecocktaildb.com/api/json/v1/1/l';
+
+const $strDrink = $(`#cocktail`);
+const $strDrinkThumb = $(`#thumbnail`);
+const $strInstructions = $(`#instructions`);
 const $input = $(`input[type="text"]`);
 
 
 
 //functions         //any event
+$('.search').on('submit', handleSubmit);
 
 function handleSubmit(evt) {
   evt.preventDefault(); //stop default browser from refresh
@@ -14,7 +19,7 @@ function handleSubmit(evt) {
 
   $input.val(""); //remove user input
 
-  $.ajax("https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007" + term)
+  $.ajax("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + term)
     .then(function (data) {
       console.log('Cocktail Data ', data);
       cocktailData = data;
@@ -24,17 +29,13 @@ function handleSubmit(evt) {
     });
 
 
-
-
   //update page
-
   function render() {
-    if (cocktailData) {
-      $strDrink.text($strDrink.data);
-      $strDrinkThumb.text($strDrinkThumb.data);
-      $strInstructions.text($strInstructions.data);
-    }
+    $strDrink.text(cocktailData.strDrink);
+    $strDrinkThumb.text('no loaded');
+    $strInstructions.text('some loaded');
+
   }
 
 };
-console.log($strDrink);
+//console.log(cocktailData.text);
