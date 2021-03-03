@@ -1,7 +1,7 @@
-const $strDrink = $('#cocktail');
-const $strIngredient = $('#ingredient');
-const $strDescription = $('#description');
-const $input = $('input[type="text"]');
+const $strDrink = $(`.cocktail`);
+const $strDrinkThumb = $(`.thumbnail`);
+const $strInstructions = $(`.instructions`);
+const $input = $(`input[type="text"]`);
 
 
 
@@ -14,8 +14,8 @@ function handleSubmit(evt) {
 
   $input.val(""); //remove user input
 
-  $.ajax("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail" + term)
-    .then(function (evt) {
+  $.ajax("https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007" + term)
+    .then(function (data) {
       console.log('Cocktail Data ', data);
       cocktailData = data;
       render();
@@ -29,13 +29,12 @@ function handleSubmit(evt) {
   //update page
 
   function render() {
-    if (strType) {
+    if (cocktailData) {
       $strDrink.text($strDrink.data);
-      $strIngredient.text($strIngredient.data);
-      $strDescription.text($strDescription.data);
+      $strDrinkThumb.text($strDrinkThumb.data);
+      $strInstructions.text($strInstructions.data);
     }
   }
 
 };
-
-console.log("LOADED");
+console.log($strDrink);
