@@ -2,9 +2,9 @@ let cocktailData;
 //----constants----
 //const Base_URL='https://www.thecocktaildb.com/api/json/v1/1/l';
 
-const $strDrink = $(`#cocktail`);
-const $strDrinkThumb = $(`#thumbnail`);
-const $strInstructions = $(`#instructions`);
+const drink = $(`#cocktail`);
+const drinkThumb = $(`#thumbnail`);
+const instruct = $(`#instructions`);
 const $input = $(`input[type="text"]`);
 
 
@@ -31,9 +31,9 @@ function handleSubmit(evt) {
 
   //update page
   function render() {
-    $strDrink.text(cocktailData.strDrink);
-    $strDrinkThumb.text('no loaded');
-    $strInstructions.text('some loaded');
+    drink.text(cocktailData.strDrink);
+    drinkThumb.text(cocktailData.strDrinkThumb); //??
+    instruct.text(cocktailData.strInstructions); //??
 
   }
 
