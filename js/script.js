@@ -1,44 +1,41 @@
-//cached element refs/// selected dom elements
-const $strType = $(`#cocktail`);
-const $strIngredients = $(`#ingredients`);
-const $strDescription = $(`#Description`);
-const $input = $(`input[type="text"]`);
-const $usrInput = $(`newFunction()`)
-
-function newFunction() {
-  return (`$strType`);
+const $strDrink = $('#cocktail');
+const $strIngredient = $('#ingredient');
+const $strDescription = $('#description');
+const $input = $('input[type="text"]');
 
 
 
-  //functions         //any event
+//functions         //any event
 
-  function handleSubmit(evt) {
-    evt.preventDefault(); //stop default browser from refresh
+function handleSubmit(evt) {
+  evt.preventDefault(); //stop default browser from refresh
 
-    const term = $input.val(); //user input
+  const term = $input.val(); //user input
 
-    $input.val(""); //remove user input
+  $input.val(""); //remove user input
 
-    $.ajax("https://www.thecocktaildb.com/api/json/v1/1/https://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka" + term)
-      .then(function (evt) {
-        console.log('Cocktail Data ', data);
+  $.ajax("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail" + term)
+    .then(function (evt) {
+      console.log('Cocktail Data ', data);
+      cocktailData = data;
+      render();
+    }, function (error) {
+      console.log('Error ', error);
+    });
 
-        render();
-      }, function (error) {
-        console.log('Error ', error);
-      })
 
-  };
 
-  //let $strType;
 
-  //update page 
+  //update page
+
   function render() {
     if (strType) {
-      $strType.text($strType.data);
-      $strIngredients.text($strIngredients.data);
+      $strDrink.text($strDrink.data);
+      $strIngredient.text($strIngredient.data);
       $strDescription.text($strDescription.data);
     }
   }
-  console.log(strType);
+
 };
+
+console.log($strDrink);
