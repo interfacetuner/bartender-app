@@ -38,4 +38,4 @@ function handleSubmit(evt) {
 
 };
 
-console.log($strDrink);
+console.log("LOADED");
