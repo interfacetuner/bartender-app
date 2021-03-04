@@ -31,9 +31,9 @@ function handleSubmit(evt) {
 
   //update page
   function render() {
-    drink.text(cocktailData.drinks[5].strDirnks);
-    drinkThumb.text(cocktailData.drinks[5].strDrinkThumb);
-    instruct.text(cocktailData.drinks[5].strInstructions);
+    drink.text(cocktailData.drinks[0].strDrink);
+    drinkThumb.text(cocktailData.drinks[0].strDrinkThumb);
+    instruct.text(cocktailData.drinks[0].strInstructions);
 
   }
 
