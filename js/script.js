@@ -5,7 +5,7 @@ let cocktailData;
 const drink = $(`#cocktail`);
 const drinkThumb = $(`#thumbnail`);
 const instruct = $(`#instructions`);
-const $input = $(`input[type="text"]`);
+const input = $(`input[type="text"]`);
 
 
 
@@ -15,13 +15,13 @@ $('.search').on('submit', handleSubmit);
 function handleSubmit(evt) {
   evt.preventDefault(); //stop default browser from refresh
 
-  const term = $input.val(); //user input
+  const term = $(`input`).val(); //user input
 
-  $input.val(""); //remove user input
+  $(`input`).val(""); //remove user input
 
   $.ajax("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + term)
     .then(function (data) {
-      console.log('Cocktail Data ', data);
+      console.log('cocktail Data ', data);
       cocktailData = data;
       render();
     }, function (error) {
@@ -31,11 +31,11 @@ function handleSubmit(evt) {
 
   //update page
   function render() {
-    drink.text(cocktailData.strDrink);
-    drinkThumb.text(cocktailData.strDrinkThumb); //??
-    instruct.text(cocktailData.strInstructions); //??
+    drink.text(cocktailData.drinks[5].strDirnks);
+    drinkThumb.text(cocktailData.drinks[5].strDrinkThumb);
+    instruct.text(cocktailData.drinks[5].strInstructions);
 
   }
 
 };
-//console.log(cocktailData.text);
+//console.log(cocktailData);
