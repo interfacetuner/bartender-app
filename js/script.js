@@ -1,4 +1,5 @@
 let cocktailData;
+let endpoint;
 //----constants----
 //const Base_URL='https://www.thecocktaildb.com/api/json/v1/1/l';
 
@@ -6,6 +7,7 @@ const drink = $(`#cocktail`);
 const drinkThumb = $(`#thumbnail`);
 const instruct = $(`#instructions`);
 const input = $(`input[type="text"]`);
+//const image = 'https://www.thecocktaildb.com/images/media/drink/.jpg';
 
 
 
@@ -14,6 +16,7 @@ $('.search').on('submit', handleSubmit);
 
 function handleSubmit(evt) {
   evt.preventDefault(); //stop default browser from refresh
+  //endpoint = this.cocktailData === '#cocktail.php?s' ? '#thumbnail.php?s' : '#instructions.php?s'
 
   const term = $(`input`).val(); //user input
 
@@ -31,11 +34,13 @@ function handleSubmit(evt) {
 
   //update page
   function render() {
-    drink.text(cocktailData.drinks[0].strDrink);
-    drinkThumb.text(cocktailData.drinks[0].strDrinkThumb);
-    instruct.text(cocktailData.drinks[0].strInstructions);
+    drink.text(cocktailData.drinks[1].strDrink);
+    drinkThumb.text(cocktailData.drinks[1].strDrinkThumb);
+    instruct.text(cocktailData.drinks[1].strInstructions);
 
   }
 
 };
 //console.log(cocktailData);
+
+//http:www.thecocktaildb.com/images/ingredients/ice-Medium.png
