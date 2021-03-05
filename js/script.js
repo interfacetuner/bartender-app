@@ -1,5 +1,5 @@
 let cocktailData;
-let endpoint;
+// let endpoint;
 //----constants----
 //const Base_URL='https://www.thecocktaildb.com/api/json/v1/1/l';
 
@@ -16,6 +16,7 @@ $('.search').on('submit', handleSubmit);
 
 function handleSubmit(evt) {
   evt.preventDefault(); //stop default browser from refresh
+
   //endpoint = this.cocktailData === '#cocktail.php?s' ? '#thumbnail.php?s' : '#instructions.php?s'
 
   const term = $(`input`).val(); //user input
@@ -29,8 +30,16 @@ function handleSubmit(evt) {
       render();
     }, function (error) {
       console.log('Error ', error);
+
     });
 
+  // let img = document.createElement('img');
+  //   img.src = 'http://www.thecocktaildb.com/images/ingredients/ice-small.png';
+  //   drinkThumb.appendChild(img);
+
+  // var img = document.createElement('img');
+  // img.src = 'http://www.thecocktaildb.com/images/ingredients/ice-small.png';
+  // result.appendChild(img);
 
   //update page
   function render() {
