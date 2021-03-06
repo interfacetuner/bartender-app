@@ -1,13 +1,53 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+:root {
+  --background: lightgray;
+  --font-family: 'RocknRoll One', sans-serif;
+}
+
+body {
   background-color: darkgray;
+  font: var(--font-family);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 40px 200px 40px;
+  background: var(--background);
 }
 
 .row {
-  max-width: 100vh;
-  max-height: 100vh;
+  max-width: 100em;
+  max-height: 100em;
   margin: auto;
   padding: 2em;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+form.search {
+  display: flex;
+  justify-content: center;
+}
+
+p#cocktail {
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+}
+
+p#thumbnail.img {
+  display: flex;
+  justify-content: center;
+  font-weight: lighter;
+}
+
+img {
+  max-width: 150px;
+  max-height: 500px;
+  image-rendering: crisp-edges;
+  border-radius: 30%;
+
 }

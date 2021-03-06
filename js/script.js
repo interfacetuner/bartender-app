@@ -47,6 +47,7 @@ function handleSubmit(evt) {
     drinkThumb.text(cocktailData.drinks[1].strDrinkThumb);
     instruct.text(cocktailData.drinks[1].strInstructions);
     $('img').attr('src', cocktailData.drinks[1].strDrinkThumb);
+
   }
 
 };
