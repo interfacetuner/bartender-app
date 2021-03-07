@@ -6,16 +6,17 @@
 body {
   background-color: darkgray;
   font: var(--font-family);
+  color: teal;
 }
 
-.container {
+.container-fluid {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 40px 200px 40px;
   background: var(--background);
 }
 
-.row {
+div.row {
   max-width: 100em;
   max-height: 100em;
   margin: auto;
@@ -25,6 +26,15 @@ body {
 h1 {
   display: flex;
   justify-content: center;
+  font-weight: bolder;
+  font-size: 85px;
+  font-family: var(--font-family);
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-family);
 }
 
 form.search {
@@ -32,22 +42,36 @@ form.search {
   justify-content: center;
 }
 
+input.form-control {
+  display: inline;
+  max-width: 300px;
+  padding: auto;
+  border-color: teal;
+  border-radius: 2em;
+
+}
+
+#button-addon2 {
+  background-color: skyblue;
+  border-radius: 75%;
+  font-family: var(--font-family);
+}
+
 p#cocktail {
   display: flex;
   justify-content: center;
   font-weight: bolder;
+  font-size: 75px;
 }
 
 p#thumbnail.img {
   display: flex;
   justify-content: center;
-  font-weight: lighter;
+  font-size: 0pt;
 }
 
 img {
   max-width: 150px;
   max-height: 500px;
-  image-rendering: crisp-edges;
   border-radius: 30%;
-
 }

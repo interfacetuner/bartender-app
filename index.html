@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css"> 
+  <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
   <!-- jQuery CDN -->
@@ -19,31 +21,33 @@
     
 
   <title> 
-	 Bartender Buddy
+	 Bartender Buddy 
 	</title> 
 </head> 
 <body> 
-	<div class="container">
+	<div class="container-fluid">
     <br>
     <h1>Bartender Buddy</h1>
-
+    <p><u>Enter a liquor to get a random cocktail recipe!</u></p>
+<div class="formData">
   <Form class="search">
-    <input type="text" placeholder="e.g.Vodka">
-  <button type="submit" id="subBtn" class="button">Search</button> 
+    <input type="text" class="form-control" placeholder="e.g.Vodka">
+    <button type="submit"  class="btn btn-outline-secondary" id="button-addon2">Search</button> 
 </Form>
+</div>
 <div class="row">
-  <p id="cocktail">Cocktail </p>​​​​​​​​​​​​​
+  <p id="cocktail"> </p>​​​​​​​​​​​​​
 
 </div>
 <div class="row">
-  <p class="img" id="thumbnail">pic </p>
+  <p class="img" id="thumbnail"> </p>
   <img src="">
   
   <!-- document.getElementById('link').innerHTML = 'The url'; -->
 
   </div>
   <div class="row">
-  <p id="instructions">instructions</p>
+  <p id="instructions"> </p>
 
   </div>
 </div>
