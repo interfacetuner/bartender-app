@@ -28,10 +28,10 @@ function handleSubmit(evt) {
 
   //update page
   function render() {
-    drink.text(cocktailData.drinks[1].strDrink);
-    drinkThumb.text(cocktailData.drinks[1].strDrinkThumb);
-    instruct.text(cocktailData.drinks[1].strInstructions);
-    $('img').attr('src', cocktailData.drinks[1].strDrinkThumb);
+    drink.text(cocktailData.drinks[0].strDrink);
+    drinkThumb.text(cocktailData.drinks[0].strDrinkThumb);
+    instruct.text(cocktailData.drinks[0].strInstructions);
+    $('img').attr('src', cocktailData.drinks[0].strDrinkThumb);
 
   }
 
