@@ -26,7 +26,7 @@ function handleSubmit(evt) {
 
     });
 
-  //update page
+  //update 
   function render() {
     drink.text(cocktailData.drinks[0].strDrink);
     drinkThumb.text(cocktailData.drinks[0].strDrinkThumb);
