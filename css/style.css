@@ -27,7 +27,7 @@ h1 {
   display: flex;
   justify-content: center;
   font-weight: bolder;
-  font-size: 85px;
+  font-size: 75px;
   font-family: var(--font-family);
 }
 
@@ -61,7 +61,7 @@ p#cocktail {
   display: flex;
   justify-content: center;
   font-weight: bolder;
-  font-size: 75px;
+  font-size: 55px;
 }
 
 p#thumbnail.img {
@@ -72,8 +72,11 @@ p#thumbnail.img {
 
 img {
   max-width: 150px;
-  max-height: 500px;
-  border-radius: 30%;
+  max-height: 450px;
+  border-radius: 20%;
 }
 
-#bottom {}
+p #instructions {
+  font-weight: bolder;
+  box-shadow: black;
+}
