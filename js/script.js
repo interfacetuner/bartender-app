@@ -1,6 +1,5 @@
 let cocktailData;
 
-
 const drink = $(`#cocktail`);
 const drinkThumb = $(`#thumbnail`);
 const instruct = $(`#instructions`);
@@ -26,7 +25,7 @@ function handleSubmit(evt) {
 
     });
 
-  //update 
+  //update page
   function render() {
     drink.text(cocktailData.drinks[0].strDrink);
     drinkThumb.text(cocktailData.drinks[0].strDrinkThumb);
