@@ -1,6 +1,6 @@
 :root {
   --background: lightgray;
-  --font-family: 'RocknRoll One', sans-serif;
+  --font-family: "RocknRoll One", sans-serif;
 }
 
 body {
@@ -46,14 +46,14 @@ input.form-control {
   display: inline;
   max-width: 300px;
   padding: auto;
-  border-color: teal;
+  border-color: white;
   border-radius: 2em;
-
 }
 
 #button-addon2 {
-  background-color: skyblue;
+  background-color: white;
   border-radius: 75%;
+  border-color: white;
   font-family: var(--font-family);
 }
 
