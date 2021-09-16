@@ -4,9 +4,10 @@ const drink = $(`#cocktail`);
 const drinkThumb = $(`#thumbnail`);
 const instruct = $(`#instructions`);
 const input = $(`input[type="text"]`);
+const ingredients = $(`#ingredients`);
 
 //functions         //any event
-$('.search').on('submit', handleSubmit);
+$(".search").on("submit", handleSubmit);
 
 function handleSubmit(evt) {
   evt.preventDefault(); //stop default browser from refresh
@@ -15,23 +16,26 @@ function handleSubmit(evt) {
 
   $(`input`).val(""); //remove user input
 
-  $.ajax("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + term)
-    .then(function (data) {
-      console.log('cocktail Data ', data);
+  $.ajax(
+    "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + term
+  ).then(
+    function (data) {
+      console.log("cocktail Data ", data);
       cocktailData = data;
       render();
-    }, function (error) {
-      console.log('Error ', error);
-
-    });
+    },
+    function (error) {
+      console.log("Error ", error);
+    }
+  );
 
   //update page
   function render() {
     drink.text(cocktailData.drinks[0].strDrink);
     drinkThumb.text(cocktailData.drinks[0].strDrinkThumb);
     instruct.text(cocktailData.drinks[0].strInstructions);
-    $('img').attr('src', cocktailData.drinks[0].strDrinkThumb);
+    ingredients.text(cocktailData.drinks[0].strIngredient1);
 
+    $("img").attr("src", cocktailData.drinks[0].strDrinkThumb);
   }
-
-};
+}
