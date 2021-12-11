@@ -1,10 +1,10 @@
 :root {
-  --background: lightgray;
+  --background: rgb(150, 180, 184);
   --font-family: "RocknRoll One", sans-serif;
 }
 
 body {
-  background-color: darkgray;
+  background-color: lightgray;
   font: var(--font-family);
   color: teal;
 }
