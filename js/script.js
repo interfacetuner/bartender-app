@@ -12,7 +12,7 @@ $(".search").on("submit", handleSubmit);
 function handleSubmit(evt) {
   evt.preventDefault(); //stop default browser from refresh
 
-  const term = $(`input`).val(); //user input
+  const term = $(`input`).val(); //get user input
 
   $(`input`).val(""); //remove user input
 
