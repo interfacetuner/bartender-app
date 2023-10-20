@@ -6,7 +6,7 @@
 body {
   background-color: lightgray;
   font: var(--font-family);
-  color: teal;
+  color: rgb(167, 233, 233);
 }
 
 .container-fluid {
