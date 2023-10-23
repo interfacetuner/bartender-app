@@ -44,7 +44,7 @@ form.search {
 
 input.form-control {
   display: inline;
-  max-width: 300px;
+  max-width: 250px;
   padding: auto;
   border-color: white;
   border-radius: 2em;
