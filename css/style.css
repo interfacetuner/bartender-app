@@ -52,7 +52,7 @@ input.form-control {
 
 #button-addon2 {
   background-color: white;
-  border-radius: 75%;
+  border-radius: 65%;
   border-color: white;
   font-family: var(--font-family);
 }
@@ -76,7 +76,7 @@ img {
   border-radius: 20%;
 }
 
-p #instructions {
+p#instructions {
   font-weight: bolder;
   box-shadow: black;
 }
