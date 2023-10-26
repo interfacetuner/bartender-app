@@ -1,12 +1,12 @@
 :root {
-  --background: rgb(150, 180, 184);
+  --background: rgb(223, 243, 249);
   --font-family: "RocknRoll One", sans-serif;
 }
 
 body {
   background-color: lightgray;
   font: var(--font-family);
-  color: rgb(167, 233, 233);
+  color: rgb(49, 163, 198);
 }
 
 .container-fluid {
