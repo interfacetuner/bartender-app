@@ -44,18 +44,18 @@ form.search {
 
 input.form-control {
   display: inline;
-  max-width: 250px;
+  max-width: 175px;
   padding: auto;
   border-color: white;
   border-radius: 2em;
 }
 
-#button-addon2 {
+/*#button-addon2 {
   background-color: white;
-  border-radius: 65%;
+  border-radius: 50%;
   border-color: white;
   font-family: var(--font-family);
-}
+}*/
 
 p#cocktail {
   display: flex;
