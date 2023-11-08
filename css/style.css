@@ -46,7 +46,7 @@ input.form-control {
   display: inline;
   max-width: 175px;
   padding: auto;
-  border-color: white;
+  border-color: rgb(247, 243, 243);
   border-radius: 2em;
 }
 
