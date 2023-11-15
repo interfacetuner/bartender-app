@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: lightgray;
+  background-color: rgb(240, 238, 238);
   font: var(--font-family);
   color: rgb(49, 163, 198);
 }
